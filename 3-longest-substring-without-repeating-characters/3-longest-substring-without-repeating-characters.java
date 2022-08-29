@@ -6,20 +6,20 @@ class Solution {
         
         for(int i = 0; i < s.length(); ++i)
         {
-            System.out.println(currLongest);
+            //System.out.println(currLongest);
             if(currLongest.indexOf(s.charAt(i)) != -1)
             {
-                System.out.println("currLongest -> " + currLongest);
+                //System.out.println("currLongest -> " + currLongest);
                 if(currLongest.length() > longest.length())
                     longest = currLongest;
                 currLongest = currLongest.substring(currLongest.indexOf(s.charAt(i)) + 1, currLongest.length());
             }
             currLongest += s.charAt(i);
-            System.out.println("new currLongest -> " + currLongest);
+            //System.out.println("new currLongest -> " + currLongest);
             
         }
         
-        System.out.println(currLongest);
+        //System.out.println(currLongest);
         
         if(currLongest.length() > longest.length())
             longest = currLongest;
