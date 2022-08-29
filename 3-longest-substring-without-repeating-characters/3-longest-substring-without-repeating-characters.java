@@ -2,7 +2,6 @@ class Solution {
     public int lengthOfLongestSubstring(String s) {
         String longest = "";
         String currLongest = "";
-        String currStr = "";
         
         for(int i = 0; i < s.length(); ++i)
         {
