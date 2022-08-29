@@ -27,7 +27,6 @@ class Solution {
             return;
         
         searchTree(node.left);
-        System.out.println(node.val);
         inOrder.add(node.val);
         searchTree(node.right);
     }
