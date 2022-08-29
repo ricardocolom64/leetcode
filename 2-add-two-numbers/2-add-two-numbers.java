@@ -19,11 +19,8 @@ class Solution {
         ListNode result = new ListNode();
         ListNode curr = result;
         
-        int temp = 0;
-        
         while(l1curr != null || l2curr != null)
         {
-            System.out.println("--");
             int x = 0;
             int y = 0;
             
@@ -32,9 +29,6 @@ class Solution {
             
             if(l2curr != null)
                 y = l2curr.val;
-            
-            System.out.print("x = " + x + " ");
-            System.out.print("y = " + y + " ");
             
             currSum = x + y + carry;
             carry = 0;
@@ -46,7 +40,6 @@ class Solution {
             }
             
             curr.val = currSum;
-            System.out.println(currSum);
             
             if(l1curr != null)
                 l1curr = l1curr.next;
