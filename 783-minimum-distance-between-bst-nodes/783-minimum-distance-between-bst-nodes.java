@@ -15,6 +15,7 @@
  */
 class Solution {
     List<Integer> sortedNodes = new ArrayList<Integer>();
+    
     public int minDiffInBST(TreeNode root) {
         searchTree(root);
         
