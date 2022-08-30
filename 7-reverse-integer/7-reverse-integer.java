@@ -52,10 +52,6 @@ class Solution {
         String numStr = "" + x;
         String maxStr = "" + Integer.MAX_VALUE;
         
-        System.out.println(maxStr);
-        
-        System.out.println(Integer.MIN_VALUE);
-        
         
         int first = 0;
         int last = numStr.length() - 1;
@@ -72,7 +68,6 @@ class Solution {
         }
         
         numStr = String.valueOf(resultChar);
-        System.out.println(numStr);
         
         int result = Integer.parseInt(numStr);
         
