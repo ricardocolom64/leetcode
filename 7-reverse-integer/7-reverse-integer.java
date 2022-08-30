@@ -33,6 +33,8 @@ class Solution {
                 int currMaxDigit = (max / (int)Math.pow(10, currMaxDigitPlace)) % 10;
 
                 System.out.println(currInpDigit + "   " + currMaxDigit);
+                
+                // If the previously checked digits are equal AND the currently checked input digit is greater than the current max digit
                 if(currInpDigit > currMaxDigit && greaterThanFlag)
                 {
                     System.out.println("Invalid number");
@@ -49,27 +51,36 @@ class Solution {
             }            
         }
         
-        String numStr = "" + x;
-        String maxStr = "" + Integer.MAX_VALUE;
+//         String numStr = "" + x;
+//         String maxStr = "" + Integer.MAX_VALUE;
         
         
-        int first = 0;
-        int last = numStr.length() - 1;
+//         int first = 0;
+//         int last = numStr.length() - 1;
         
-        char[] resultChar = new char[numStr.length()];
+//         char[] resultChar = new char[numStr.length()];
         
-        while(first <= last)
-        {
-            resultChar[first] = numStr.charAt(last);
-            resultChar[last] = numStr.charAt(first);
+//         while(first <= last)
+//         {
+//             resultChar[first] = numStr.charAt(last);
+//             resultChar[last] = numStr.charAt(first);
             
-            first++;
-            last--;
+//             first++;
+//             last--;
+//         }
+        
+//         numStr = String.valueOf(resultChar);
+        
+//         int result = Integer.parseInt(numStr);
+        
+        int result = 0;
+        
+        while(x > 0)
+        {
+            result *= 10;
+            result += x % 10;
+            x /= 10;
         }
-        
-        numStr = String.valueOf(resultChar);
-        
-        int result = Integer.parseInt(numStr);
         
         if(isNegative)
             result *= -1;
