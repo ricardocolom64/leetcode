@@ -51,28 +51,6 @@ class Solution {
             }            
         }
         
-//         String numStr = "" + x;
-//         String maxStr = "" + Integer.MAX_VALUE;
-        
-        
-//         int first = 0;
-//         int last = numStr.length() - 1;
-        
-//         char[] resultChar = new char[numStr.length()];
-        
-//         while(first <= last)
-//         {
-//             resultChar[first] = numStr.charAt(last);
-//             resultChar[last] = numStr.charAt(first);
-            
-//             first++;
-//             last--;
-//         }
-        
-//         numStr = String.valueOf(resultChar);
-        
-//         int result = Integer.parseInt(numStr);
-        
         int result = 0;
         
         while(x > 0)
