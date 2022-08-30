@@ -11,10 +11,11 @@ class Solution {
         
         boolean isNegative = false;
         
+        if(x == Integer.MIN_VALUE)
+                return 0;
+        
         if(x < 0)
         {
-            if(x == -2147483648)
-                return 0;
             isNegative = true;
             x *= -1;
         }
