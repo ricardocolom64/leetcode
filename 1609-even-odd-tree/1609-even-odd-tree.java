@@ -40,7 +40,6 @@ class Solution {
                     levelNums.add(new ArrayList<>());
                 }
                 levelNums.get(currLevel).add(nodeQ.peek().val);
-                System.out.println("Adding " + nodeQ.peek().val + " to " + currLevel);
                 
                 if(head.left != null)
                     nodeQ.add(head.left);
@@ -52,15 +51,11 @@ class Solution {
                 if(nodeQ.size() > 1)
                 {
                     nodeQ.add(null);
-                    System.out.println("----");
                     currLevel++;
                 }
             }
             nodeQ.remove();
         }
-        
-        boolean currLevelOdd = true;
-        boolean currLevelIncreasing = true;
         
         for(int i = 0; i < levelNums.size(); ++i)
         {
@@ -72,6 +67,7 @@ class Solution {
                 if(!isOddAndIncreasing(levelNums.get(i)))
                    return false;
             }
+            //Odd level
             else
             {
                 System.out.println(i + " -> " + isEvenAndDecreasing(levelNums.get(i)));
