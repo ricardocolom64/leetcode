@@ -2,17 +2,15 @@ class Solution {
     public int mySqrt(int x) {
         int halfX = x;
         int lastHalf = x / 2;
-        boolean done = false;
         
         if(x >= 2147395600)
         {
             return 46340;
-        }
-        
+        }        
         
         halfX = 46339;
         
-        while(!done)
+        while(halfX*halfX != x)
         {            
             if(halfX * halfX > x)
             {
@@ -26,9 +24,7 @@ class Solution {
             else
             {
                 halfX = (halfX + lastHalf) / 2;
-            }
-            
-                
+            }                
         }
         
         return halfX;
