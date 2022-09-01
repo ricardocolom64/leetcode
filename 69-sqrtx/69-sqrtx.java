@@ -13,28 +13,23 @@ class Solution {
         halfX = 46339;
         
         while(!done)
-        {
-            System.out.println(halfX);
-            
+        {            
             if(halfX * halfX > x)
             {
                 lastHalf = halfX;                
                 halfX = halfX / 2;                
             }
-            if(halfX * halfX == x)
-                done = true;
+            else if(halfX * halfX == x)
+                return halfX;
             else if(halfX * halfX <= x && (halfX+1)*(halfX+1) > x)
-                done = true;
-            else if(halfX * halfX < x)
+                return halfX;
+            else
             {
-                System.out.println(halfX + " * " + halfX + " is too small");
                 halfX = (halfX + lastHalf) / 2;
             }
             
                 
         }
-        
-        System.out.println(halfX);
         
         return halfX;
         
