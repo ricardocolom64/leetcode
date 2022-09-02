@@ -12,6 +12,9 @@ class Solution {
         int j = nums.length - 1;
         int occ = 0;
         
+        if(val > 50)
+            return nums.length;
+        
         for(int i = 0; i < nums.length; ++i)
         {
             if(nums[i] == val)
