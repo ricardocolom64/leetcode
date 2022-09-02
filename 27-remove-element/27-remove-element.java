@@ -22,7 +22,6 @@ class Solution {
                 occ++;
                 while(nums[j] == val && j > 0)
                 {
-                    System.out.println("nums[" + j + "] is " + val);
                     --j;
                 }
                 nums[i] = nums[j];
