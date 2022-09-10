@@ -34,8 +34,6 @@ class Solution {
             }
         }
         
-        System.out.println(maxLength);
-        
         return maxLength;
     }
 }
