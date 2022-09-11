@@ -9,16 +9,13 @@ class Solution {
         
         for(int i = 0; i < prices.length; ++i)
         {
-            ///System.out.println(prices[i]);
             if(prices[i] < min)
             {
                 min = prices[i];
-                //System.out.println("New min: " + prices[i]);
             }
             if(prices[i] - min > maxDiff)
             {
                 maxDiff = prices[i] - min;
-                //System.out.println("New maxDiff: " + maxDiff);
             }
                 
         }
