@@ -1,5 +1,8 @@
 class Solution {
     public int mostFrequentEven(int[] nums) {
+        
+        // Sorting the array first would probably be faster
+        
         HashMap<Integer, Integer> map = new HashMap<>();
         
         int maxFreq = 0;
@@ -11,7 +14,6 @@ class Solution {
             {
                 if(map.containsKey(nums[i]))
                 {
-                    //System.out.println("Has " + nums[i]);
                     map.put(nums[i], map.get(nums[i]) + 1);                    
                 }
                 else
@@ -29,8 +31,6 @@ class Solution {
                 }
             }
         }
-        
-        //System.out.println(freqElem);
         
         return freqElem;
     }
