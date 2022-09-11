@@ -1,7 +1,7 @@
 class Solution {
     public int maxProfit(int[] prices) {
         
-        if(prices.length <= 1)
+        if(prices.length < 2)
             return 0;
         
         int maxDiff = prices[1] - prices[0];
@@ -9,7 +9,7 @@ class Solution {
         
         for(int i = 0; i < prices.length; ++i)
         {
-            System.out.println(prices[i]);
+            ///System.out.println(prices[i]);
             if(prices[i] < min)
             {
                 min = prices[i];
