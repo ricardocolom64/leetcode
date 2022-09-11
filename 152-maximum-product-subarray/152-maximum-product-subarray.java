@@ -1,41 +1,33 @@
 class Solution {
     public int maxProduct(int[] nums) {
         
-        int currProd = 1;
-        int maxProd = nums[0];
-        
-        // Kadane?
-        
-//         for(int i = 0; i < nums.length; ++i)
-//         {
-//             currProd *= nums[i];
-            
-//             if(nums[i] > currProd)
-//                 currProd = nums[i];
-            
-//             if(currProd > maxProd)
-//                 maxProd = currProd;
-//         }
-        
-//         return maxProd;
-        
-        
-        // Brute Force
-        
-        for(int i = 0; i < nums.length; ++i)
-        {
-            currProd = 1;
-            
-            for(int j = i; j < nums.length; ++j)
-            {
-                currProd *= nums[j];
-                
-                if(currProd > maxProd)
-                    maxProd = currProd;
+        int maxsum = nums[0];
+        int cursum = 1;
+        if (nums.length == 1) {
+            return nums[0];
+        }
+        for (int i = 0; i < nums.length; i++) {
+            cursum = cursum * nums[i];
+
+            if (cursum > maxsum) {
+                maxsum = cursum;
+            }
+            if (cursum == 0) {
+                cursum = 1;
             }
         }
-        
-        return maxProd;
+        cursum = 1;
+        for (int i = nums.length - 1; i > 0; i--) {
+            cursum = cursum * nums[i];
+
+            if (cursum > maxsum) {
+                maxsum = cursum;
+            }
+            if (cursum == 0) {
+                cursum = 1;
+            }
+        }
+        return maxsum;
         
     }
 }
