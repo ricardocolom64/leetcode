@@ -18,10 +18,10 @@ class Solution {
         
         for(int i = 0; i < nums.length; ++i)
         {
-            if(nums[i] > nums[i] + currSum)
+            currSum += nums[i];
+            
+            if(nums[i] > currSum)
                 currSum = nums[i];
-            else
-                currSum = nums[i] + currSum;
             
             if(currSum > maxSum)
                 maxSum = currSum;
