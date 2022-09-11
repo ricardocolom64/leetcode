@@ -27,8 +27,6 @@ class Solution {
                 maxSum = currSum;
         }
         
-        System.out.println(maxSum);
-        
         //System.out.println(maxSum);
         
         return maxSum;
