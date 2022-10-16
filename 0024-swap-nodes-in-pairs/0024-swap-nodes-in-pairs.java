@@ -45,8 +45,6 @@ class Solution {
         oddNodes.get(oddNodes.size() - 1).next = null;
         evenNodes.get(evenNodes.size() - 1).next = null;
         
-        System.out.println(evenNodes.size());
-        
         if(evenNodes.size() == 1 && oddNodes.size() == 1)
         {
             result.next = oddNodes.get(0);
@@ -57,8 +55,6 @@ class Solution {
         
         for(int i = 0; i < oddNodes.size() + evenNodes.size(); ++i)
         {
-            System.out.println("i: " + i);
-            System.out.println("curr: " + curr.val);
             if(i % 2 == 0)
             {
                 curr.next = oddNodes.get(i / 2);
@@ -75,13 +71,8 @@ class Solution {
                     curr.next = evenNodes.get((i / 2) + 1);
             }
             
-            System.out.println("curr.next: " + curr.next.val);
-            System.out.println("");
-            
             curr = curr.next;
         }
-        
-        System.out.println(result.next.next.val);
         
         return result;
     }
