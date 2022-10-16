@@ -5,8 +5,7 @@ class Solution {
         
         for(int i = 0; i < s.length(); ++i)
         {
-            String currentCharacterToString = "" + s.charAt(i);
-            if(curr.contains(currentCharacterToString))
+            if(curr.indexOf(s.charAt(i)) != -1)
             {
                 //System.out.println("curr, " + curr + ", contains " + s.charAt(i));
                 if(curr.length() > longest.length())
