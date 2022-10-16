@@ -19,7 +19,7 @@ public class Solution {
             //System.out.println(curr.val);
             if(map.containsKey(curr))
             {
-                System.out.println("Contains " + curr.val);
+                //System.out.println("Contains " + curr.val);
                 return true;
             }
             
