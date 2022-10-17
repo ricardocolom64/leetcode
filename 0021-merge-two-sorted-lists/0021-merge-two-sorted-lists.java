@@ -79,7 +79,7 @@ class Solution {
                 }
             }
             
-            System.out.println("newListcurr.val: " + newListcurr.val);
+            //System.out.println("newListcurr.val: " + newListcurr.val);
             newListcurr = newListcurr.next;
             
             if(list1curr == null && list2curr == null)
